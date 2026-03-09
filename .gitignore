@@ -1,0 +1,6 @@
+venv/
+dataset/
+features/
+models/
+__pycache__/
+*.pyc

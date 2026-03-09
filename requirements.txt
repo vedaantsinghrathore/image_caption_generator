@@ -1,0 +1,7 @@
+tensorflow
+numpy
+pillow
+streamlit
+nltk
+tqdm
+matplotlib
