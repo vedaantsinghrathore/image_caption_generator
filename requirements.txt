@@ -1,7 +1,6 @@
-tensorflow
-numpy
-pillow
 streamlit
-nltk
-tqdm
-matplotlib
+pillow
+torch
+transformers
+gtts
+pygame
