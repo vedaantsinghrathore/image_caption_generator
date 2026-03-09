@@ -3,4 +3,3 @@ pillow
 torch
 transformers
 gtts
-pygame

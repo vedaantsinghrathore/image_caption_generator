@@ -3,7 +3,6 @@ from PIL import Image
 import torch
 from transformers import BlipProcessor, BlipForConditionalGeneration
 from gtts import gTTS
-import pygame
 import uuid
 import os
 import time
@@ -269,14 +268,11 @@ def speak_text(text):
     tts = gTTS(text=text, lang='en', tld='co.in', slow=False)
     tts.save(filename)
 
-    pygame.mixer.init()
-    pygame.mixer.music.load(filename)
-    pygame.mixer.music.play()
+    audio_file = open(filename, "rb")
+    audio_bytes = audio_file.read()
+    st.audio(audio_bytes, format="audio/mp3")
 
-    while pygame.mixer.music.get_busy():
-        time.sleep(0.1)
-
-    pygame.mixer.music.unload()
+    audio_file.close()
     os.remove(filename)
 
 # -----------------------------
